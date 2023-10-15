@@ -1,4 +1,4 @@
-# 🎲 Dicey - Where Chance is My Dearest Companion, Baby! 🎲
+# 🎲 Dicey - We let our battles choose us 🎲
 
 Oh, welcome to the marvelous world of **Dicey**, my dear friends! 🌟 In this enchanting realm, we embrace the whims of fate, for **Chance is the only game I play with, baby**. 🎶 Let us embark on this thrilling adventure where we allow our battles to choose us, when and where they may. 🚀
 
