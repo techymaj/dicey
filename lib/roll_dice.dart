@@ -66,9 +66,7 @@ class _RollDiceState extends State<RollDice> {
                     // if snackbar action is pressed, cancel timer
                     if (previous == face) {
                       timer.cancel();
-                      setState(() {
-                        countDown = face;
-                      });
+                      countDown = face;
                     }
                   });
                 },
