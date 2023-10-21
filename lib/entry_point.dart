@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'roll_dice.dart';
+import 'screens/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -32,6 +33,10 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      routes: {
+        RollDice.routeName: (context) => const RollDice(),
+        SplashScreen.routeName: (context) => const SplashScreen(),
+      },
     );
   }
 }

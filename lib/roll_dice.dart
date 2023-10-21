@@ -6,7 +6,7 @@ import 'body_text_default.dart';
 
 class RollDice extends StatefulWidget {
   const RollDice({super.key});
-
+  static const routeName = '/roll-dice';
   @override
   State<RollDice> createState() => _RollDiceState();
 }
@@ -60,9 +60,14 @@ class _RollDiceState extends State<RollDice> {
                     if (countDown <= 1) {
                       timer.cancel();
                     }
-                    setState(() {
-                      countDown--;
-                    });
+                    setState(
+                      () {
+                        countDown--;
+                        if (countDown == 0) {
+                          Navigator.pushNamed(context, '/splash-screen');
+                        }
+                      },
+                    );
                     // if snackbar action is pressed, cancel timer
                     if (previous == face) {
                       timer.cancel();
@@ -88,11 +93,12 @@ class _RollDiceState extends State<RollDice> {
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
             style: TextButton.styleFrom(
-                foregroundColor: Colors.amber.shade300,
-                backgroundColor: const Color.fromARGB(78, 255, 224, 130),
-                textStyle: const TextStyle(
-                  fontSize: 20.0,
-                )),
+              foregroundColor: Colors.amber.shade300,
+              backgroundColor: const Color.fromARGB(78, 255, 224, 130),
+              textStyle: const TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
             child: const Text('Roll dice'),
           ),
         )
